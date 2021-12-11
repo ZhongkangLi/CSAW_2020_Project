@@ -26,6 +26,11 @@
     └── repaired_sunglass.h5
 ├── architecture.py
 └── eval.py // this is the evaluation script
+└── eval_repaired.py // the evaluation script that shows all the repaired model performance
+└── eval_sunglass.py 
+└── eval_anonymous1.py
+└── eval_anonymous2.py
+└── eval_anonymous_multi.py
 ```
 
 ## I. Dependencies
@@ -52,10 +57,10 @@
    3. To evaluate the repaired model, execute `eval_repaired.py` by running:  
       `python3 eval_repaired.py`.
 
-   4. To use the repaired model to evaluate some images, execute `eval_img.py` by runnning:
-      `python3 eval_img.py <repaired model directory> <image directory>`.
+   4. To use the repaired model to evaluate some images, execute `eval_<model name>.py` by runnning:
+      `python3 eval_<<model name>>.py <repaired model directory> <image directory>`.
 
-      E.g., `python3 eval_img.py repaired_models/repaired_sunglass.h5 data/testImages/test_image.png`.
+      E.g., `python3 eval_sunglass.py repaired_models/repaired_sunglass.h5 data/testImages/test_image.png`.
       
 ## IV. Evaluating the Submissions
 The teams should submit a single eval.py script for each of the four BadNets provided to you. In other words, your submission should include four eval.py scripts, each corresponding to one of the four BadNets provided. YouTube face dataset has classes in range [0, 1282]. So, your eval.py script should output a class in range [0, 1283] for a test image w.r.t. a specific backdoored model. Here, output label 1283 corresponds to poisoned test image and output label in [0, 1282] corresponds to the model's prediction if the test image is not flagged as poisoned. Effectively, design your eval.py with input: a test image (in png or jpeg format), output: a class in range [0, 1283]. Output 1283 if the test image is poisoned, else, output the class in range [0,1282].
