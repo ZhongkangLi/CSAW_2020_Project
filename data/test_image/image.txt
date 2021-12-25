@@ -1,1 +1,8 @@
-
+For test images
+00 to 02 are images from clean test dataset
+10 to 12 are images from clean validation dataset
+20 to 22 are images from clean sunglass poisoned dataset
+30 to 32 are images from clean anonymous poisoned dataset
+40 to 42 are images from clean multi-trigger multi-target eyebrows poisoned dataset
+50 to 52 are images from clean multi-trigger multi-target lipstrick poisoned dataset
+60 to 62 are images from clean multi-trigger multi-target sunglasses poisoned dataset
